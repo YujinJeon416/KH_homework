@@ -51,7 +51,7 @@ public class MemberTest {
 	}
 
 	public boolean isUserExist(String userId) {
-		return false;
+		return map.containsKey(userId);
 	}
 	
 
@@ -59,9 +59,10 @@ public class MemberTest {
 	 * 2. Map에 저장된 회원중 인자로 전달한 아이디가 존재하는 여부를 검사하는 메소드를 생성하세요.
 	 */
 	private void test2() {
-		System.out.println(map.containsKey("jangbg"));
-		System.out.println(map.containsKey("sejong"));
+		System.out.println(isUserExist("jangbg"));
+		System.out.println(isUserExist("sejong"));
 	}
+	
 	
 	/**
 	 * 3. yooon 아이디 조회후 해당객체를 다음과 같이 수정하세요.
