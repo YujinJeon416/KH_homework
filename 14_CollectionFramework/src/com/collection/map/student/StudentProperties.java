@@ -75,19 +75,19 @@ public class StudentProperties {
 		
 		//Properties는 map계열이므로, iterator를 지원하지 않는다.
 		//Enumeration을 통해 접근할 수 있다.
-		Enumeration<?> en = prop.propertyNames();
-		while(en.hasMoreElements()){
-			String key = (String)en.nextElement();
-			String value = prop.getProperty(key);
-			String[] info = value.split(",");
-			int sno = Integer.parseInt(info[0]);
-			String sname = info[1];
-			int kor = Integer.parseInt(info[2]);
-			int eng = Integer.parseInt(info[3]);
-			int math = Integer.parseInt(info[4]);
-			Student s = new Student(sno, sname, kor, eng, math);
-			list.add(s);
-		}
+// 		Enumeration<?> en = prop.propertyNames();
+// 		while(en.hasMoreElements()){
+// 			String key = (String)en.nextElement();
+// 			String value = prop.getProperty(key);
+// 			String[] info = value.split(",");
+// 			int sno = Integer.parseInt(info[0]);
+// 			String sname = info[1];
+// 			int kor = Integer.parseInt(info[2]);
+// 			int eng = Integer.parseInt(info[3]);
+// 			int math = Integer.parseInt(info[4]);
+// 			Student s = new Student(sno, sname, kor, eng, math);
+// 			list.add(s);
+// 		}
 
 		//keySet이용방식
 		Set<String> keySet = prop.stringPropertyNames();
