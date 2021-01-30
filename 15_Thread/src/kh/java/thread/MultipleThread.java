@@ -27,3 +27,5 @@ public class MultipleThread implements Runnable {
 	}
 
 }
+
+
